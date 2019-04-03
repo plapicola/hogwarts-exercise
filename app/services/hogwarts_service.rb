@@ -1,6 +1,6 @@
 class HogwartsService
-  def students_for_house(house)
-    get_json("/api/v1/house/#{house}")[:data][0]
+  def students_for_house(house_id)
+    get_json("/api/v1/house/#{house_id}")
   end
 
   private
@@ -10,8 +10,8 @@ class HogwartsService
   end
 
   def conn
-    Faraday.new(url: 'http://hogwarts-it.herokuapp.com/') do |faraday|
-      faraday.params["api_key"] = '3fhZMZNXVndxk51mILsdVnGN6tF8KBI6'
+    Faraday.new(url: 'http://hogwarts-as-a-service.herokuapp.com/') do |faraday|
+      faraday.headers["x-api-key"] = 'oPGaRUMm7Cpisj6fosH8VhIgjnxx8zh1'
       faraday.adapter Faraday.default_adapter
     end
   end

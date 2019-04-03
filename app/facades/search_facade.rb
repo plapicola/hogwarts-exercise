@@ -17,6 +17,6 @@ class SearchFacade
   private
 
   def get_students
-    @service.students_for_house(@house)[:attributes][:students]
+    @service.students_for_house(@house)
   end
 end
