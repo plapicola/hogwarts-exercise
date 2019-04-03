@@ -5,7 +5,7 @@ describe 'Searching for students' do
     it 'I can search for students by house' do
       visit root_path
 
-      select 'Slytherin', from: :search
+      select 'Slytherin', from: :house
 
       click_on 'Get Students'
 
