@@ -20,7 +20,7 @@ RSpec.describe SearchFacade do
       facade = SearchFacade.new("Slytherin")
 
       expect(facade.students.length).to eq(22)
-      expect(Facade.students.all? {|s| s.class == Student}).to be true
+      expect(facade.students.all? {|s| s.class == Student}).to be true
     end
   end
 end
